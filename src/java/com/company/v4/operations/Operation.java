@@ -1,4 +1,4 @@
-package com.company.v4;
+package com.company.v4.operations;
 
 public interface Operation {
 

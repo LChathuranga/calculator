@@ -1,8 +1,6 @@
 package com.company.v4;
 
-import com.company.v4.operations.AddOperation;
-import com.company.v4.operations.MulOperation;
-import com.company.v4.operations.SubOperation;
+import com.company.v4.operations.*;
 
 import java.io.IOException;
 
@@ -15,22 +13,11 @@ public class main {
         FileReader fileReader = new FileReader();
         Double[] numbers = fileReader.getNumbers();
 
-        Operation operation = null;
-
-        if (operator.equals("add")) {
-
-            operation = new AddOperation();
-
-        } else if (operator.equals("sub")) {
-
-            operation = new SubOperation();
-
-        } else {
-
-            operation = new MulOperation();
-
-        }
+        OperationFactory operationFactory = new OperationFactory();
+        Operation operation = operationFactory.getInstance(operator);
         Double result = operation.execute(numbers);
-        System.out.println(result);
+
+        UI ui = new UI();
+        ui.showMessage("The result is : " + result);
     }
 }
