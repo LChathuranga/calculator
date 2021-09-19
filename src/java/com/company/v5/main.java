@@ -2,7 +2,6 @@ package com.company.v5;
 
 import com.company.v5.input.CommandLineInputs;
 import com.company.v5.input.Inputs;
-import com.company.v5.operations.Operation;
 import com.company.v5.operations.OperationFactory;
 import com.company.v5.repository.FileNumberRepository;
 import com.company.v5.repository.NumberRepository;

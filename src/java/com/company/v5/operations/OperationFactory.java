@@ -14,7 +14,11 @@ public class OperationFactory {
 
             operation = new SubOperation();
 
-        } else {
+        } else if (operator.equals("div")) {
+
+            operation = new DivOperation();
+
+        }else {
 
             operation = new MulOperation();
 

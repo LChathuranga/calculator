@@ -9,7 +9,7 @@ public class FileNumberRepository implements NumberRepository {
 
     public Double[] getNumbers() throws IOException {
 
-        List<String> numbers = Files.readAllLines(Paths.get("C:\\Users\\Lahir\\Desktop\\Software Construction\\calculator\\read1.txt"));
+        List<String> numbers = Files.readAllLines(Paths.get("C:\\Users\\Lahir\\OneDrive\\Desktop\\Software Construction\\calculator\\read1.txt"));
 
         double number1 = Double.parseDouble(numbers.get(0));
         double number2 = Double.parseDouble(numbers.get(1));
